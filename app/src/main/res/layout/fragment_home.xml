@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/tv_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="20dp"
+                android:text="Hello Reader"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/name_app"
+                android:textColor="@color/black"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/act_search_book"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hello"
+                android:layout_marginStart="20dp"
+                android:paddingStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_search"
+                android:hint="Search book"
+                android:background="@drawable/edt_background"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/sv_category"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                app:layout_constraintTop_toBottomOf="@+id/act_search_book"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imv_history"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/history_circle"
+                        android:layout_marginStart="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_history"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imv_history"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="20dp"
+                        android:text="History"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/imv_technology"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:layout_constraintStart_toEndOf="@id/imv_history"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="40dp"
+                        android:src="@drawable/technology_circle"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_technology"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imv_technology"
+                        app:layout_constraintStart_toEndOf="@+id/tv_history"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="30dp"
+                        android:text="Technology"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_romance"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:layout_constraintStart_toEndOf="@id/imv_technology"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="40dp"
+                        android:src="@drawable/romance_circle"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_romance"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imv_romance"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_technology"
+                        android:layout_marginStart="30dp"
+                        android:text="Romance"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_adventure"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:layout_constraintStart_toEndOf="@id/imv_romance"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="40dp"
+                        android:src="@drawable/adventure_cicle"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_adventure"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imv_technology"
+                        app:layout_constraintStart_toEndOf="@+id/tv_romance"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginStart="30dp"
+                        android:text="Adventure"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imv_story"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:layout_constraintStart_toEndOf="@id/imv_adventure"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="40dp"
+                        android:src="@drawable/story_circle"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_story"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/imv_story"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_adventure"
+                        android:layout_marginStart="30dp"
+                        android:text="Story"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_list_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/sv_category"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Books"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:fontFamily="@font/name_app"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/tv_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_category"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:text="See all >>"
+                />
+
+            <HorizontalScrollView
+                android:id="@+id/sv_filter_book"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_book"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_filter_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_filter_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_filter_1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_filter_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_filter_2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_filter_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_filter_3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_filter_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_filter_4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list_book_filter"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/sv_filter_book"
+                android:layout_marginTop="15dp"
+                android:scrollbarStyle="outsideOverlay"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
